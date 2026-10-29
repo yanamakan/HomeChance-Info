@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>HomeChance SA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="wrap">
+            <a href="#home" class="logo"><img
+                    src="data:image/png;base64,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"
+                    alt="HomeChance logo">HomeChance</a>
+            <ul>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#how">How it works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#roles">Roles</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#stack">Tech</a></li>
+                <!-- <li><a href="#progress">Progress</a></li> -->
+                <li><a href="#team">Team</a></li>
+                <!-- <li><a href="#cta" class="btn">Get the app</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="wrap hero">
+            <div>
+                <h1>Verified property.<br><em>Real</em> opportunity.</h1>
+                <p class="lede">HomeChance SA is a mobile app where every listed home is identity-checked,
+                    ownership-checked and reviewed by a person before anyone can buy a ticket for it. One ticket is your
+                    chance at a home.</p>
+                <div class="actions"><a class="btn" href="#how">See how it works</a></div>
+                <div class="pill-row">
+                    <div><strong>4</strong>Seekers, sellers, lawyers, admins</div>
+                    <div><strong>5</strong>Server-side Edge Functions</div>
+                    <div><strong>5</strong>Private storage buckets</div>
+                </div>
+            </div>
+            <div class="phone" aria-label="HomeChance app preview">
+                <div class="screen">
+                    <small>Good morning</small>
+                    <div class="greet">Where would you love to live?</div>
+                    <div class="card">
+                        <div class="photo"><span class="badge">Verified</span><span class="live">LIVE</span>
+                            <svg viewBox="0 0 64 64" fill="none" stroke="#F5F4F0" stroke-width="3"
+                                stroke-linejoin="round">
+                                <path d="M6 32 32 9l26 23M14 28v26h36V28" />
+                                <path d="M27 54V38h10v16" stroke="#C9922F" />
+                            </svg>
+                        </div>
+                        <div class="body">
+                            <h4>3-bedroom family home</h4><small>Johannesburg · sample listing</small>
+                            <div class="row"><span>Property value</span><b>Shown on listing</b></div>
+                            <div class="row"><span>Ticket price</span><b>Suggested by the app</b></div>
+                            <div class="bar"><i></i></div><small>Ticket sales progress</small>
+                        </div>
+                    </div>
+                    <div class="mini">
+                        <div><b>✓ Identity</b>Checked</div>
+                        <div><b>✓ Ownership</b>Checked</div>
+                        <div><b>✓ Admin</b>Approved</div>
+                    </div>
+                    <div class="ctabtn">Buy Ticket</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="marquee" aria-label="Built with">
+        <div class="track">
+            <span>React Native</span><span>Expo</span><span>Supabase</span><span>PostgreSQL</span><span>Row Level
+                Security</span><span>Edge Functions</span><span>Groq AI</span><span>OpenStreetMap</span><span>EAS
+                Build</span>
+            <span aria-hidden="true">React Native</span><span aria-hidden="true">Expo</span><span
+                aria-hidden="true">Supabase</span><span aria-hidden="true">PostgreSQL</span><span aria-hidden="true">Row
+                Level Security</span><span aria-hidden="true">Edge Functions</span><span aria-hidden="true">Groq
+                AI</span><span aria-hidden="true">OpenStreetMap</span><span aria-hidden="true">EAS Build</span>
+        </div>
+    </div> -->
+
+    <section id="problem">
+        <div class="wrap">
+            <h2>Property is slow, costly, and increasingly faked.</h2>
+            <p class="sub">South Africa’s property market faces two linked challenges: inefficiency and fraud.</p>
+            <div class="three">
+                <div class="panel">
+                    <h3>Slow and expensive</h3>
+                    <p>Transactions involve high commission fees and paperwork scattered between estate agents, banks,
+                        conveyancers and the Deeds Office.</p>
+                </div>
+                <div class="panel">
+                    <h3>Fraud is rising</h3>
+                    <p>Criminals use AI-generated fake listings, forged title deeds, identity theft and impersonation of
+                        real agencies.</p>
+                </div>
+                <div class="panel">
+                    <h3>Nothing joins it up</h3>
+                    <p>Existing platforms mostly advertise properties. None combine verification, secure documents and
+                        transaction tracking in one place.</p>
+                </div>
+            </div>
+            <p class="gap">HomeChance SA brings verification, document management and transaction tracking into one
+                mobile app.</p>
+        </div>
+    </section>
+
+    <section id="how">
+        <div class="wrap">
+            <h2>Buy a ticket. Win a home.</h2>
+            <p class="sub">Participants buy tickets for a verified house and the app runs a random draw to pick the
+                winner. Sellers avoid long listing periods; the winner gets a home at a lower price.</p>
+            <div class="steps">
+                <div class="step">
+                    <h3>List</h3>
+                    <p>The seller submits the property with identity and ownership documents.</p>
+                </div>
+                <div class="step">
+                    <h3>Verify</h3>
+                    <p>An AI risk check and address lookup run, then an administrator approves or rejects.</p>
+                </div>
+                <div class="step">
+                    <h3>Enter</h3>
+                    <p>Verified participants buy tickets for the draw.</p>
+                </div>
+                <div class="step">
+                    <h3>Draw</h3>
+                    <p>When the draw closes, the system randomly selects a winner, who is verified again.</p>
+                </div>
+                <div class="step">
+                    <h3>Transfer</h3>
+                    <p>A conveyancing attorney handles clearances and Deeds Office registration.</p>
+                </div>
+            </div>
+            <div class="story"><b>Worked example:</b> Sarah lists her three-bedroom Johannesburg house. Once her
+                identity and ownership are verified, it goes live. Thabo buys entries, is drawn as the winner and passes
+                a final check. After the legal transfer, he is the owner and Sarah receives the agreed proceeds under
+                the platform’s terms.</div>
+        </div>
+    </section>
+
+    <section id="draw">
+        <div id="confetti"></div>
+        <div class="wrap">
+            <h2>Try a draw</h2>
+            <p class="sub">Every ticket is an entry. Press the button and watch a sample draw pick a winner. This is a
+                demo; the real draw engine is still being built.</p>
+            <div class="draw-wrap">
+                <div class="dgrid" id="dgrid" aria-label="Sample tickets"></div>
+                <div class="dpanel">
+                    <div class="dstat"><strong>48</strong><span>sample tickets sold</span></div>
+                    <div class="dwin" id="dwin" aria-live="polite">Press the button to draw a winner.</div>
+                    <button class="btn" id="drawBtn" type="button">Run a sample draw</button>
+                    <p class="dnote">The winner is then verified again before the legal transfer starts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pipeline">
+        <div class="wrap">
+            <h2>Watch a listing earn its badge</h2>
+            <p class="sub">No home goes live until it passes every check.</p>
+            <div class="pipe" id="pipe">
+                <div class="pline"><i id="pfill"></i></div>
+                <div class="pstep">
+                    <div class="pnode"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+                            <path d="M14 3v5h5" />
+                            <path d="M9 13h6M9 17h4" />
+                        </svg></div>
+                    <h3>Submitted</h3>
+                    <p>Seller adds details, photos, identity and ownership documents.</p>
+                </div>
+                <div class="pstep">
+                    <div class="pnode"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="6" y="6" width="12" height="12" rx="2" />
+                            <path d="M9.5 9.5h5v5h-5z" />
+                            <path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3" />
+                        </svg></div>
+                    <h3>AI risk check</h3>
+                    <p>Address lookup, duplicate detection and a risk assessment.</p>
+                </div>
+                <div class="pstep">
+                    <div class="pnode"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z" />
+                            <path d="M8.8 12l2.3 2.3 4.2-4.6" />
+                        </svg></div>
+                    <h3>Admin review</h3>
+                    <p>A person approves, flags or rejects. The AI never decides alone.</p>
+                </div>
+                <div class="pstep">
+                    <div class="pnode"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 11.5L12 4l9 7.5" />
+                            <path d="M5.5 10v10h13V10" />
+                            <path d="M10 20v-5.5h4V20" />
+                        </svg></div>
+                    <h3>Live</h3>
+                    <p>Verified listing is visible to buyers.</p>
+                </div>
+            </div>
+            <div class="pstatus">
+                <div><b>3-bedroom family home</b><small>Johannesburg · sample listing</small></div>
+                <span id="pbadge" class="pbadge">Draft</span>
+                <button class="replay" id="preplay" type="button">Replay</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="screens">
+        <div class="wrap">
+            <h2>See the app</h2>
+            <p class="sub">Real screens from the running app. Swipe or use the arrows.</p>
+            <div class="shots" id="shots">
+                <figure class="shot">
+                    <div class="frame" data-label="Home"><img src="images/screens/home.png" alt="Buyer home screen"
+                            onerror="this.parentNode.classList.add('empty')"></div>
+                    <figcaption>Buyer home</figcaption>
+                </figure>
+                <figure class="shot">
+                    <div class="frame" data-label="Search"><img src="images/screens/search.png" alt="Search screen"
+                            onerror="this.parentNode.classList.add('empty')"></div>
+                    <figcaption>Search verified homes</figcaption>
+                </figure>
+                <figure class="shot">
+                    <div class="frame" data-label="Details"><img src="images/screens/details.png"
+                            alt="Property details screen" onerror="this.parentNode.classList.add('empty')"></div>
+                    <figcaption>Property details</figcaption>
+                </figure>
+                <figure class="shot">
+                    <div class="frame" data-label="Submit"><img src="images/screens/submit.png"
+                            alt="Seller submission screen" onerror="this.parentNode.classList.add('empty')"></div>
+                    <figcaption>Seller submission</figcaption>
+                </figure>
+                <figure class="shot">
+                    <div class="frame" data-label="Admin"><img src="images/screens/admin.png"
+                            alt="Admin AI analysis screen" onerror="this.parentNode.classList.add('empty')"></div>
+                    <figcaption>Admin AI analysis</figcaption>
+                </figure>
+            </div>
+            <div class="shotnav"><button type="button" id="shotPrev" aria-label="Previous">←</button><button
+                    type="button" id="shotNext" aria-label="Next">→</button></div>
+        </div>
+    </section> -->
+
+    <section id="features">
+        <div class="wrap">
+            <h2>What the platform does</h2>
+            <p class="sub">Each feature is labelled with where it stands today, so you can see what’s built and what’s
+                next.</p>
+            <div class="feat">
+                <div class="panel">
+                    <h3>Admin fraud review</h3>
+                    <p>Every pending listing gets an address check, duplicate detection and an AI risk assessment. Hard
+                        rules stop the AI lowering a risk score below the facts, and a human always makes the final
+                        call.</p>
+                </div>
+                <div class="panel">
+                    <h3>Secure document management</h3>
+                    <p>Sellers upload, view and delete documents for their own properties. Verified documents can’t be
+                        deleted, and private files open only through links that expire in 60 seconds.</p>
+                </div>
+                <div class="panel">
+                    <h3>Four-step listing submission</h3>
+                    <p>Validated form with photo grid and document list. If any save fails, files and the half-made
+                        listing are rolled back.</p>
+                </div>
+                <div class="panel">
+                    <h3>Support with automatic emails</h3>
+                    <p>Help Centre and Contact Support. Each message triggers an email to the team and a confirmation to
+                        the user.</p>
+                </div>
+                <div class="panel">
+                    <h3>Search and ticket tracking</h3>
+                    <p>Home, Search and Property Details read live listings. Tickets and draw progress show each buyer’s
+                        own data. Payment methods and two-factor are demonstrations.</p>
+                </div>
+                <div class="panel">
+                    <h3>Ticket payments and the draw engine</h3>
+                    <p>Secure server-side ticket creation, a payment provider, and an audited random draw with published
+                        results.</p>
+                </div>
+                <div class="panel">
+                    <h3>ChanceAI and smart search</h3>
+                    <p>Plain-language search converted into database queries, and an assistant for buyer questions.
+                        ChanceAI currently gives scripted replies.</p>
+                </div>
+                <div class="panel">
+                    <h3>Transaction tracker and messaging</h3>
+                    <p>Real-time status for active transactions and secure in-app messaging between buyers, sellers and
+                        lawyers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roles" style="padding-top:0">
+        <div class="wrap">
+            <h2>One app, four experiences</h2>
+            <p class="sub">Each person sees only the screens built for them. Only buyers and sellers can sign up;
+                lawyers and administrators are created by an administrator.</p>
+            <div class="tabs" role="tablist" id="tabs"></div>
+            <div class="panel rolebox" id="rolebox" role="tabpanel"></div>
+        </div>
+    </section>
+
+    <section id="security">
+        <div class="wrap">
+            <h2>Built so one mistake can’t leak your data</h2>
+            <p class="sub">Rules are enforced in the database itself, not just in the app.</p>
+            <div class="sec">
+                <div>
+                    <h3>Row Level Security</h3>
+                    <p>Database rows are limited to their owners and to administrators.</p>
+                </div>
+                <div>
+                    <h3>Locked-down profiles</h3>
+                    <p>Users can edit only a fixed set of fields. Role, verification, active flag and email can’t be
+                        changed from the app.</p>
+                </div>
+                <div>
+                    <h3>Routing by database role</h3>
+                    <p>The app trusts the role in the profiles table, never editable user metadata.</p>
+                </div>
+                <div>
+                    <h3>Short-lived file links</h3>
+                    <p>Private documents open through signed URLs that expire after 60 seconds.</p>
+                </div>
+                <div>
+                    <h3>Keys stay on the server</h3>
+                    <p>The app holds only the public key. The service-role key, SMTP password and AI key live in
+                        Supabase secrets.</p>
+                </div>
+                <div>
+                    <h3>Encrypted session, lockout</h3>
+                    <p>On phones the saved session is encrypted. Three wrong passwords block sign-in for one minute.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack">
+        <div class="wrap">
+            <h2>The tech stack</h2>
+            <p class="sub">One codebase for Android and iOS, with Supabase handling the backend.</p>
+            <div class="stack">
+                <div class="panel">
+                    <h3>Frontend</h3>
+                    <div class="chips"><span>React Native (Expo)</span><span>React Navigation</span><span>ThemeContext
+                            (light/dark)</span><span>react-native-svg</span><span>lucide-react-native</span><span>expo-linear-gradient</span><span>Playfair
+                            Display + Manrope</span></div>
+                </div>
+                <div class="panel">
+                    <h3>Backend</h3>
+                    <div class="chips"><span>Supabase Auth</span><span>Database functions</span><span>Database
+                            triggers</span><span>5 Edge Functions</span><span>Role-based routing</span></div>
+                </div>
+                <div class="panel">
+                    <h3>Database &amp; storage</h3>
+                    <div class="chips"><span>Supabase PostgreSQL</span><span>Row Level Security</span><span>5 private
+                            storage buckets</span><span>60-second signed
+                            URLs</span><span>AsyncStorage</span><span>expo-secure-store</span></div>
+                </div>
+                <div class="panel">
+                    <h3>AI &amp; models</h3>
+                    <div class="chips"><span>Groq LLM risk assessment</span><span>verify-property Edge
+                            Function</span><span>ChanceAI</span><span>OCR</span><span>Smart
+                            search</span></div>
+                </div>
+                <div class="panel">
+                    <h3>Hosting &amp; deployment</h3>
+                    <div class="chips"><span>Supabase cloud (eu-west-2, London)</span><span>Secrets kept
+                            server-side</span><span>EAS Build (Expo cloud builds)</span><span>Android APK (preview
+                            profile)</span><span>iOS via Xcode sideload / Simulator</span><span>OTA updates (eas
+                            update)</span><span>Internal distribution</span></div>
+                </div>
+                <div class="panel">
+                    <h3>Third-party APIs</h3>
+                    <div class="chips"><span>Groq API</span><span>OpenStreetMap Nominatim</span><span>Google sign-in
+                            (OAuth)</span><span>SMTP email</span><span>Apple sign-in</span><span>Payment
+                            provider</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="progress" style="padding-top:0">
+        <div class="wrap">
+            <h2>Where we are today</h2>
+            <p class="sub">Based on Draft 5 of the project documentation.</p>
+            <div class="prog">
+                <div class="panel" style="--c:var(--green)">
+                    <h3>Done</h3>
+                    <ul>
+                        <li>Sign-up, sign-in, Google sign-in and code-based password recovery</li>
+                        <li>Buyer and seller mode switching</li>
+                        <li>Seller pages on real data</li>
+                        <li>Administrator portal with AI risk assessment</li>
+                        <li>Lawyer account creation with forced password change</li>
+                        <li>Support emails, tested</li>
+                    </ul>
+                </div>
+                <div class="panel" style="--c:var(--amber)">
+                    <h3>In progress</h3>
+                    <ul>
+                        <li>Buyer screens on live data</li>
+                        <li>Legal screens, still on sample data</li>
+                        <li>Admin Settings screen</li>
+                        <li>Seller notifications</li>
+                        <li>Test results and screenshots</li>
+                    </ul>
+                </div>
+                <div class="panel" style="--c:var(--orange)">
+                    <h3>Planned</h3>
+                    <ul>
+                        <li>Ticket payments and the draw engine</li>
+                        <li>Property inspection step</li>
+                        <li>ChanceAI on the server</li>
+                        <li>Real two-factor authentication</li>
+                        <li>Apple sign-in, which needs a paid developer account</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="team" style="padding-top:0">
+        <div class="wrap">
+            <h2>Meet SABYONI DEVS</h2>
+            <p class="sub">Seven developers, one mission: making property verified and accessible in South Africa.</p>
+            <div class="team">
+                <div class="member">
+                    <div class="photo-wrap"><img src="images/Sthembile.jpeg" alt="SS Sithole"
+                            onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'SS'}))">
+                    </div>
+                    <div><b>SS Sithole</b><small>Frontend Lead/ Fullstack Developer</small><em>Developer</em></div>
+                </div>
+                <div class="member">
+                    <div class="photo-wrap"><img src="images/Adi.jpeg" alt="FA Mudau"
+                            onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'FM'}))">
+                    </div>
+                    <div><b>FA Mudau</b><small>Frontend Developer / Business Analysis</small><em>Business Analyst</em>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="photo-wrap"><img src="images/bontle.jpg" alt="B Rapesioa"
+                            onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'BR'}))">
+                    </div>
+                    <div><b>B Rapesioa</b><small>Frontend Developer</small><em>Designer</em></div>
+                </div>
+                <div class="member">
+                    <div class="photo-wrap"><img src="images/Yana.jpg" alt="Y Makan"
+                            onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'YM'}))">
+                    </div>
+                    <div><b>Y Makan</b><small>Project Manager / Database Manager</small><em>Strategy</em></div>
+                </div>
+                <div class="member">
+                    <div class="photo-wrap"><img src="images/Nathan.jpg" alt="NM Lumbwe"
+                            onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'NL'}))">
+                    </div>
+                    <div><b>NM Lumbwe</b><small>Full Stack Developer</small><em>Developer</em></div>
+                </div>
+                <div class="member">
+                    <div class="photo-wrap"><img src="images/Israel2.jpeg" alt="IL Kasatuka"
+                            onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'IK'}))">
+                    </div>
+                    <div><b>IL Kasatuka</b><small>Full Stack Developer / Group Leader</small><em>Infra / DevOps</em>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="photo-wrap"><img src="images/Mbuyi.jpeg" alt="KE Mbuyi"
+                            onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'KM'}))">
+                    </div>
+                    <div><b>KE Mbuyi</b><small>Documentation/ Frontend Developer</small><em>Documentation</em></div>
+                </div>
+            </div>
+            <p class="meta">Module: Development Software 2B (DSW02B1)</p>
+        </div>
+    </section>
+
+    <section id="get">
+        <div class="wrap getbox">
+            <div>
+                <h2>Try it on your phone</h2>
+                <p class="sub">Scan the code on an Android phone to download the app.</p>
+                <ol class="gsteps">
+                    <li>Scan the QR code or open the link.</li>
+                    <li>If prompted, allow installs from this source.</li>
+                    <li>Tap Install. Later builds install over the top without losing data.</li>
+                </ol>
+                <a class="btn" id="apkLink" target="_blank" rel="noopener"
+                    href="https://expo.dev/accounts/yanamakan/projects/HomeChanceSA/builds/899d4805-23ce-4fde-b9d9-e08fbaa98405">Download
+                    the APK</a>
+            </div>
+            <div class="qr">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>SABYONI DEVS · HomeChance SA · Verified property. Real opportunity.</footer>
+
+    <script>
+        var roles = [
+            { n: "Property Seeker", e: "Tabs: Homes, Search, Tickets, Profile", d: "Browse verified draws and follow your journey to ownership.", l: ["Browse and search live listings", "Track your own tickets and draw progress", "Complete buyer verification", "Receive documents from lawyers", "Buy tickets"] },
+            { n: "Property Seller", e: "Tabs: Overview, My Property, Documents, Profile", d: "List a home and watch it move through verification.", l: ["Submit a property in four steps", "Upload identity and ownership documents", "Track verification progress", "See tickets sold and draw status", "Archive or delete a listing under clear rules"] },
+            { n: "Legal Professional", e: "Tabs: Dashboard, Documents, Profile", d: "Guide both parties from draw result to registered transfer.", l: ["Manage assigned transactions", "Request and upload documents", "Approve transaction stages", "Contact buyer and seller", "Prototype on sample data today"] },
+            { n: "Administrator", e: "Tabs: Overview, AI Analysis, Lawyers, User Identity", d: "The human who makes the final decision on every listing.", l: ["Review AI risk results; approve, flag or reject", "Verify or reject user identity", "Create lawyer accounts with temporary passwords", "Run the AI check on any listing", "Every decision checked and logged server-side"] }];
+        var tabs = document.getElementById('tabs'), box = document.getElementById('rolebox');
+        function show(i) {
+            [].forEach.call(tabs.children, function (b, j) { b.setAttribute('aria-selected', j == i) });
+            var r = roles[i]; box.innerHTML = '<div><h3>' + r.n + '</h3><div class="entry">' + r.e + '</div><p style="color:var(--muted);margin:0">' + r.d + '</p></div><ul>' + r.l.map(function (x) { return '<li>' + x + '</li>' }).join('') + '</ul>'
+        }
+        roles.forEach(function (r, i) { var b = document.createElement('button'); b.textContent = r.n; b.setAttribute('role', 'tab'); b.onclick = function () { show(i) }; tabs.appendChild(b) }); show(0);
+    </script>
+    <script>
+        // spotlight follows the cursor inside each card
+        document.querySelectorAll('.panel').forEach(function (p) {
+            p.addEventListener('pointermove', function (e) {
+                var r = p.getBoundingClientRect();
+                p.style.setProperty('--mx', e.clientX - r.left + 'px');
+                p.style.setProperty('--my', e.clientY - r.top + 'px');
+            });
+        });
+        // hero numbers count up on load
+        if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.pill-row strong').forEach(function (el) {
+                var n = +el.textContent, t = 0; el.textContent = 0;
+                var iv = setInterval(function () { el.textContent = ++t; if (t >= n) clearInterval(iv); }, 260);
+            });
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---------- 1. DRAW DEMO ---------- */
+        (function () {
+            var grid = document.getElementById('dgrid'), btn = document.getElementById('drawBtn'),
+                out = document.getElementById('dwin'), conf = document.getElementById('confetti'),
+                N = 48, tiles = [], busy = false;
+            for (var i = 1; i <= N; i++) {
+                var t = document.createElement('div'); t.className = 'tk';
+                t.textContent = 'No. ' + (i < 10 ? '0' + i : i); grid.appendChild(t); tiles.push(t);
+            }
+            function rnd(n) { var a = new Uint32Array(1); crypto.getRandomValues(a); return a[0] % n; }
+            function clear() { tiles.forEach(function (x) { x.classList.remove('hot', 'win'); }); grid.classList.remove('done'); }
+            function burst() {
+                var colors = ['#C9922F', '#ffe29a', '#E0A02F', '#2F9E5C', '#F5F4F0'];
+                for (var k = 0; k < 80; k++) {
+                    var c = document.createElement('i'); c.className = 'cf';
+                    c.style.left = rnd(100) + '%'; c.style.background = colors[rnd(colors.length)];
+                    c.style.setProperty('--dx', (rnd(240) - 120) + 'px'); c.style.setProperty('--r', rnd(720) + 'deg');
+                    c.style.animationDelay = (rnd(500) / 1000) + 's'; conf.appendChild(c);
+                    setTimeout(function (el) { el.remove(); }.bind(null, c), 3600);
+                }
+            }
+            function finish(w) {
+                clear(); tiles[w].classList.add('win'); grid.classList.add('done');
+                out.textContent = 'Ticket ' + tiles[w].textContent + ' wins. Next: final verification, then the legal transfer.';
+                if (!reduce) burst();
+                busy = false; btn.textContent = 'Run another draw';
+            }
+            btn.addEventListener('click', function () {
+                if (busy) return; busy = true; clear(); out.textContent = 'Drawing…';
+                var win = rnd(N);
+                if (reduce) return finish(win);
+                var path = []; for (var p = 0; p < 26; p++) path.push(rnd(N)); path.push(win);
+                var step = 0;
+                (function tick() {
+                    clear(); tiles[path[step]].classList.add('hot');
+                    if (step === path.length - 1) return setTimeout(function () { finish(win); }, 420);
+                    step++; setTimeout(tick, 55 + step * step * 0.55);
+                })();
+            });
+        })();
+
+        /* ---------- 3. PIPELINE ---------- */
+        (function () {
+            var sec = document.getElementById('pipeline'), steps = sec.querySelectorAll('.pstep'),
+                fill = document.getElementById('pfill'), badge = document.getElementById('pbadge'),
+                labels = ['Pending review', 'AI risk check running', 'Admin reviewing', 'Approved and live'], timers = [];
+            function set(i) {
+                steps.forEach(function (s, j) { s.classList.toggle('on', j <= i); });
+                fill.style.width = (i / (steps.length - 1) * 100) + '%';
+                badge.textContent = labels[i]; badge.classList.toggle('ok', i === steps.length - 1);
+            }
+            function play() {
+                timers.forEach(clearTimeout); timers = []; fill.style.width = '0'; badge.textContent = 'Draft';
+                steps.forEach(function (s) { s.classList.remove('on'); }); badge.classList.remove('ok');
+                for (var i = 0; i < steps.length; i++) (function (n) { timers.push(setTimeout(function () { set(n); }, reduce ? 0 : 500 + n * 1100)); })(i);
+            }
+            new IntersectionObserver(function (e, o) { if (e[0].isIntersecting) { play(); o.disconnect(); } }, { threshold: .45 }).observe(sec);
+            document.getElementById('preplay').addEventListener('click', play);
+        })();
+
+        /* ---------- 2. SCREENS CAROUSEL ---------- */
+        (function () {
+            var s = document.getElementById('shots');
+            document.getElementById('shotPrev').onclick = function () { s.scrollBy({ left: -280, behavior: 'smooth' }); };
+            document.getElementById('shotNext').onclick = function () { s.scrollBy({ left: 280, behavior: 'smooth' }); };
+        })();
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        (function () {
+            var APK_URL = 'https://expo.dev/accounts/yanamakan/projects/HomeChanceSA/builds/899d4805-23ce-4fde-b9d9-e08fbaa98405';
+            var box = document.getElementById('qrcode'), link = document.getElementById('apkLink');
+            link.href = APK_URL;
+            if (window.QRCode) {
+                new QRCode(box, { text: APK_URL, width: 180, height: 180, colorDark: '#0D1F17', colorLight: '#ffffff' });
+            } else {
+                box.innerHTML = '<div class="qrmsg">QR code unavailable. Use the download button.</div>';
+            }
+        })();
+    </script>
+</body>
+
+</html>
