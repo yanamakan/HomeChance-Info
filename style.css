@@ -2426,3 +2426,32 @@
                 grid-template-columns: 1fr
             }
         }
+
+        .dwin.cd {
+            font-size: 56px;
+            text-align: center;
+            color: #E0A02F;
+            animation: pop .5s
+        }
+
+        .dwin.big {
+            font-size: 30px;
+            color: #ffe29a;
+            animation: pop .7s
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(.5);
+                opacity: 0
+            }
+
+            60% {
+                transform: scale(1.15)
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1
+            }
+        }

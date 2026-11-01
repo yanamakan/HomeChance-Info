@@ -779,6 +779,36 @@
             });
         })();
 
+        function finish(w) {
+            clear(); tiles[w].classList.add('win'); grid.classList.add('done');
+            out.className = 'dwin big';
+            out.textContent = JUDGES[w] + ' wins the home!';
+            if (!reduce) { burst(); setTimeout(burst, 600); }
+            busy = false; btn.textContent = 'Run another draw';
+        }
+        btn.addEventListener('click', function () {
+            if (busy || !N) return; busy = true; clear(); out.className = 'dwin';
+            var win = rnd(N);
+            if (reduce) return finish(win);
+            var c = 3;
+            (function countdown() {
+                if (c > 0) { out.className = 'dwin cd'; out.textContent = c--; return setTimeout(countdown, 800); }
+                out.className = 'dwin'; out.textContent = 'Drawing…'; spin();
+            })();
+            function spin() {
+                var path = [], last = -1;
+                for (var p = 0; p < 30; p++) { var x; do { x = rnd(N); } while (N > 1 && x === last); path.push(x); last = x; }
+                if (N > 1) while (path[path.length - 1] === win) path[path.length - 1] = rnd(N);
+                path.push(win);
+                var step = 0;
+                (function tick() {
+                    clear(); tiles[path[step]].classList.add('hot');
+                    if (step === path.length - 1) return setTimeout(function () { finish(win); }, 600);
+                    step++; setTimeout(tick, 45 + step * step * 0.3);
+                })();
+            }
+        });
+
         /* ---------- 3. PIPELINE ---------- */
         (function () {
             var sec = document.getElementById('pipeline'), steps = sec.querySelectorAll('.pstep'),
